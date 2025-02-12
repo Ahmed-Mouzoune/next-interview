@@ -1,31 +1,31 @@
-# Test Technique Next.js
+# Technical test Next.js
 
-## Configuration initiale
+## Initial configuration
 
-1. Créez un nouveau projet Next.js avec TypeScript :
+1. Create a new Next.js project with TypeScript :
 
 ```bash
 npx create-next-app@latest next-interview --typescript --tailwind --eslint
-cd mon-test-technique
+cd next-interview
 ```
 
-2. Installez les dépendances shadcn/ui nécessaires :
+2. Install the necessary shadcn/ui dependencies:
 
 ```bash
 npx shadcn-ui@latest init
 ```
 
-## Tâches à réaliser
+## Tasks to be performed
 
-### 1. Affichage des produits avec pagination
+### 1. Product display with pagination
 
-Créez un composant `ProductCard` qui affiche les informations d'un produit, et utiliser pour afficher tout les produits du fichier products.ts, et implémentez la pagination. Vous devrez utiliser les composants shadcn/ui suivants :
+Create a `ProductCard` component that displays product information, and use it to display all products in the products.ts file, and implement pagination. You'll need to use the following shadcn/ui components:
 
 - [Card](https://ui.shadcn.com/docs/components/card)
-- [Badge](https://ui.shadcn.com/docs/components/badge)
-- [Button](https://ui.shadcn.com/docs/components/button)
+- Badge](https://ui.shadcn.com/docs/components/badge)
+- Button](https://ui.shadcn.com/docs/components/button)
 
-Installation des composants :
+Component installation:
 
 ```bash
 npx shadcn-ui@latest add card
@@ -33,37 +33,19 @@ npx shadcn-ui@latest add badge
 npx shadcn-ui@latest add button
 ```
 
-Créez un hook personnalisé `usePagination` qui :
+Create a custom `usePagination` hook that :
 
-- Accepte un tableau de données et la taille de la page
-- Retourne les données paginées et les fonctions de navigation
-- Gère le changement de page et le calcul des pages totales
+- Accepts an array of data and the page size
+- Returns paginated data and navigation functions
+- Handles page change and total page calculation
 
-### 2. Intégration API
+### 2. API integration
 
-1. Créez un hook `useProducts` qui :
+1. Create a `useProducts` hook that :
 
-   - Utilise initialement les données locales du fichier `products.ts`
-   - Prépare la structure pour basculer vers un appel API
-   - Gère les états de chargement et d'erreur
+   - Initially uses local data from the `products.ts` file
+   - Prepares the structure to switch to an API call
+   - Handles loading and error states
 
-2. Remplacez les données locales par un appel API :
-   - Endpoint à utiliser : `https://fakestoreapi.com/products`
-   - Adaptez les données reçues au format de votre interface Product
-   - Gérez les états de chargement et d'erreur dans l'UI
-
-### 3. Bonus - Mode Sombre (5 minutes)
-
-Implémentez un toggle pour basculer entre le mode clair et sombre :
-
-1. Installez next-themes :
-
-```bash
-npm install next-themes
-```
-
-2. Suivez la documentation de shadcn/ui pour l'implémentation du mode sombre.
-
-## Aperçu du résultat attendu
-
-Vous pouvez consulter la version finale du test sur [URL_DU_DEPLOIEMENT] pour avoir un aperçu du résultat attendu.
+2. Replace the local data with an API call:
+   - Endpoint to use: `https://fakestoreapi.com/products`
